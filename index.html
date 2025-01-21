@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma M3 Encrypter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        textarea, input, select {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enigma M3 Encrypter</h1>
+    <p>Type a message below to encrypt it using the enhanced Enigma M3 logic.</p>
+
+    <textarea id="inputMessage" placeholder="Enter your message..."></textarea>
+    
+    <label for="plugboard">Plugboard (e.g., AB CD EF):</label>
+    <input type="text" id="plugboard" placeholder="Enter plugboard settings">
+
+    <label for="rotor1">Rotor 1:</label>
+    <select id="rotor1">
+        <option value="EKMFLGDQVZNTOWYHXUSPAIBRCJ">I</option>
+        <option value="AJDKSIRUXBLHWTMCQGZNPYFVOE">II</option>
+        <option value="BDFHJLCPRTXVZNYEIWGAKMUSQO">III</option>
+        <option value="ESOVPZJAYQUIRHXLNFTGKDCMWB">IV</option>
+        <option value="VZBRGITYUPSDNHLXAWMJQOFECK">V</option>
+        <option value="JPGVOUMFYQBENHZRDKASXLICTW">VI</option>
+        <option value="NZJHGRCXMYSWBOUFAIVLPEKQDT">VII</option>
+        <option value="FKQHTLXOCBJSPDZRAMEWNIUYGV">VIII</option>
+    </select>
+
+    <label for="rotor2">Rotor 2:</label>
+    <select id="rotor2">
+        <option value="EKMFLGDQVZNTOWYHXUSPAIBRCJ">I</option>
+        <option value="AJDKSIRUXBLHWTMCQGZNPYFVOE">II</option>
+        <option value="BDFHJLCPRTXVZNYEIWGAKMUSQO">III</option>
+        <option value="ESOVPZJAYQUIRHXLNFTGKDCMWB">IV</option>
+        <option value="VZBRGITYUPSDNHLXAWMJQOFECK">V</option>
+        <option value="JPGVOUMFYQBENHZRDKASXLICTW">VI</option>
+        <option value="NZJHGRCXMYSWBOUFAIVLPEKQDT">VII</option>
+        <option value="FKQHTLXOCBJSPDZRAMEWNIUYGV">VIII</option>
+    </select>
+
+    <label for="rotor3">Rotor 3:</label>
+    <select id="rotor3">
+        <option value="EKMFLGDQVZNTOWYHXUSPAIBRCJ">I</option>
+        <option value="AJDKSIRUXBLHWTMCQGZNPYFVOE">II</option>
+        <option value="BDFHJLCPRTXVZNYEIWGAKMUSQO">III</option>
+        <option value="ESOVPZJAYQUIRHXLNFTGKDCMWB">IV</option>
+        <option value="VZBRGITYUPSDNHLXAWMJQOFECK">V</option>
+        <option value="JPGVOUMFYQBENHZRDKASXLICTW">VI</option>
+        <option value="NZJHGRCXMYSWBOUFAIVLPEKQDT">VII</option>
+        <option value="FKQHTLXOCBJSPDZRAMEWNIUYGV">VIII</option>
+    </select>
+    <br><br>
+
+    <button onclick="encryptMessage()">Encrypt</button>
+
+    <div class="output" id="encryptedOutput"></div>
+
+    <script>
+        function applyPlugboard(char, plugboard) {
+            for (let pair of plugboard.split(' ')) {
+                if (pair.length === 2) {
+                    const [a, b] = pair.split('');
+                    if (char === a) return b;
+                    if (char === b) return a;
+                }
+            }
+            return char;
+        }
+
+        function encryptCharacter(char, rotor, offset) {
+            const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const shiftedRotor = rotor.slice(offset) + rotor.slice(0, offset);
+            const index = alphabet.indexOf(char);
+            return shiftedRotor[index] || char;
+        }
+
+        function encryptMessage() {
+            const input = document.getElementById('inputMessage').value.toUpperCase();
+            const plugboard = document.getElementById('plugboard').value.toUpperCase();
+            const rotor1 = document.getElementById('rotor1').value;
+            const rotor2 = document.getElementById('rotor2').value;
+            const rotor3 = document.getElementById('rotor3').value;
+
+            const rotorOffsets = [1, 3, 5]; // Example rotor offsets
+
+            let encryptedMessage = '';
+
+            for (let char of input) {
+                if (/[A-Z]/.test(char)) {
+                    let afterPlugboard = applyPlugboard(char, plugboard);
+                    let step1 = encryptCharacter(afterPlugboard, rotor1, rotorOffsets[0]);
+                    let step2 = encryptCharacter(step1, rotor2, rotorOffsets[1]);
+                    let step3 = encryptCharacter(step2, rotor3, rotorOffsets[2]);
+                    let finalPlugboard = applyPlugboard(step3, plugboard);
+                    encryptedMessage += finalPlugboard;
+                } else {
+                    encryptedMessage += char;
+                }
+            }
+
+            document.getElementById('encryptedOutput').innerText = `Encrypted Message: ${encryptedMessage}`;
+        }
+    </script>
+</body>
 </html>
